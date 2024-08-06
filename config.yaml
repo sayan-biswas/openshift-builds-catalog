@@ -1,0 +1,44 @@
+name: openshift-builds-operator
+repository: openshift-builds/openshift-builds-operator-bundle
+konflux:
+  namespace: openshift-builds
+  prefix: openshift-builds-fbc
+  github: redhat-openshift-builds/catalog
+upgrade:
+  between_major: skipRange
+ocp:
+  - v4.12
+  - v4.13
+  - v4.14
+  - v4.15
+  - v4.16
+  - v4.17
+replacements:
+  - from: registry.redhat.io/openshift-builds/openshift-builds-operator-bundle
+    to: registry.redhat.io/openshift-builds/openshift-builds-operator-bundle
+# Enable when the images are not pushed to registry.redhat.io
+#  - from: registry.redhat.io/openshift-builds/openshift-builds-operator-bundle
+#    to: quay.io/redhat-user-workloads/rh-openshift-builds-tenant/openshift-builds/openshift-builds-operator-bundle
+#  - from: registry.redhat.io/openshift-builds/openshift-builds-rhel9-operator
+#    to: quay.io/redhat-user-workloads/rh-openshift-builds-tenant/openshift-builds/openshift-builds-operator
+#  - from: registry.redhat.io/openshift-builds/openshift-builds-controller-rhel9
+#    to: quay.io/redhat-user-workloads/rh-openshift-builds-tenant/openshift-builds/openshift-builds-controller
+#  - from: registry.redhat.io/openshift-builds/openshift-builds-image-processing-rhel9
+#    to: quay.io/redhat-user-workloads/rh-openshift-builds-tenant/openshift-builds/openshift-builds-image-processing
+#  - from: registry.redhat.io/openshift-builds/openshift-builds-image-bundler-rhel9
+#    to: quay.io/redhat-user-workloads/rh-openshift-builds-tenant/openshift-builds/openshift-builds-image-bundler
+#  - from: registry.redhat.io/openshift-builds/openshift-builds-git-cloner-rhel9
+#    to: quay.io/redhat-user-workloads/rh-openshift-builds-tenant/openshift-builds/openshift-builds-git-cloner
+#  - from: registry.redhat.io/openshift-builds/openshift-builds-waiters-rhel9
+#    to: quay.io/redhat-user-workloads/rh-openshift-builds-tenant/openshift-builds/openshift-builds-waiter
+#  - from: registry.redhat.io/openshift-builds/openshift-builds-webhook-rhel9
+#    to: quay.io/redhat-user-workloads/rh-openshift-builds-tenant/openshift-builds/openshift-builds-webhook
+#  - from: registry.redhat.io/openshift-builds/openshift-builds-shared-resource-rhel9
+#    to: quay.io/redhat-user-workloads/rh-openshift-builds-tenant/openshift-builds/openshift-builds-shared-resource
+#  - from: registry.redhat.io/openshift-builds/openshift-builds-shared-resource-webhook-rhel9
+#    to: quay.io/redhat-user-workloads/rh-openshift-builds-tenant/openshift-builds/openshift-builds-shared-resource-webhook
+bundles:
+  - sha256:7396a2b15e1674cdf447889a336cadc2b9a3d292a201c04f310bd10b9d4088b6
+  - sha256:56c474f8bc49060c3f1a6fc19d5984b2bbf81ac3ab76a80ce63faa9010d0759f
+  - sha256:d098d7a51bf3bf5b4c4e27bb570069e4f3e9c897b731ccc8d3a04f5aba77e448
+  - sha256:42d06f8b7d7ba8f527141ab2f8c0573d081f7257d0ed237e7341bd4f6c218e57
