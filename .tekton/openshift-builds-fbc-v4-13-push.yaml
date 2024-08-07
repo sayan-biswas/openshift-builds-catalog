@@ -27,7 +27,7 @@ spec:
   - name: revision
     value: '{{revision}}'
   - name: output-image
-    value: quay.io/redhat-user-workloads/rh-openshift-builds-tenant/openshift-builds/openshift-builds-catalog:{{revision}}
+    value: quay.io/redhat-user-workloads/rh-openshift-builds-tenant/openshift-builds-fbc-v4-13/openshift-builds-fbc-v4-13:{{revision}}
   - name: dockerfile
     value: Dockerfile
   - name: path-context
