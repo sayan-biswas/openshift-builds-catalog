@@ -31,3 +31,4 @@ go.work
 _output
 temp
 tmp
+workdir
